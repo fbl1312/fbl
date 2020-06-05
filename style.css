@@ -9,25 +9,15 @@
 body {
     color: white;
     background-color: black;
-    margin: 20px 20px;
+    margin: 30px 20px;
 }
 
-#container {}
-
-#forfloyd {
-    background-image: url(texture.png);
-    width: 100vw;
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    position: fixed;
-    mix-blend-mode: exclusion;
-    filter: brightness(50) invert(1);
-    top: 0;
-    left: 0;
-
-
+#container {
+    display: none;
+    
 }
+
+
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -45,7 +35,7 @@ ol {
     text-transform: uppercase;
     font-size: 26px;
     letter-spacing: .04em;
-    line-height: 1.2;
+    line-height: 1.15;
     font-weight: bold;
     font-kerning: auto;
     text-transform: uppercase;
@@ -63,7 +53,7 @@ table {
     text-align: left;
     width: 100%;
     margin: 0px 0px 30px;
-    padding-bottom: 40px;
+    padding-bottom: 50px;
     word-spacing: .1em;
 }
 
@@ -79,8 +69,6 @@ a,
     margin: -.5px;
     color: white;
     text-decoration: none;
-    background-image: url(texture.png);
-    background-size: 400px;
 
 
 }
@@ -94,7 +82,7 @@ th:hover {
 }
 
 #links {
-    margin: 100px 0px 100px;
+    margin: 20px 0px 100px;
 
 }
 
@@ -110,6 +98,9 @@ h1 {
     letter-spacing: -.2vw;
     font-weight: 100;
     text-align: center;
+    text-transform: uppercase;
+    word-spacing: -1vw;
+    margin-bottom: 30px;
 
 
 }
@@ -154,10 +145,12 @@ th {
 
 nav {
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: -200px;
+    right: 0px;
     cursor: pointer;
     mix-blend-mode: exclusion;
+    transition: .2s ease;
+    margin-bottom: 10px
 
 }
 
@@ -166,20 +159,23 @@ nav a {
     font-size: 60px;
     cursor: pointer;
     border: none;
-    margin: 10px;
     padding: 0;
+    margin-right: 2px;
 }
 
 nav a:hover {
     text-decoration: none;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 td {
     width: 30%;
 }
 
-.footer {}
+.footer {
+    margin-top: 100px;
+    
+}
 
 p,
 ol {
@@ -188,7 +184,7 @@ ol {
     padding: 0;
     text-align: left;
     max-width: calc(50% - 100px);
-    letter-spacing: .04em;
+    letter-spacing: .035em;
 
 }
 

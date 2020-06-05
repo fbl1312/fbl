@@ -14,6 +14,9 @@ function httpGetAsync(theUrl, callback) {
                 var d = JSON.parse(xmlHttp.responseText);
                 $('.number').html(d.feed.entry.length)
                 var amount = 0;
+                $('#title').html(d.feed.title.$t)
+                $('#goal').html(d.feed.entry[0].gsx$goal.$t)
+                $('#date').html(d.feed.entry[1].gsx$goal.$t)
 
                 for (i = 0; i < d.feed.entry.length; i++) {
 
@@ -27,7 +30,6 @@ function httpGetAsync(theUrl, callback) {
                     $('#table > tbody:last-child').append(row);
                     var donationM = parseInt(donation);
                     amount += donationM
-                    console.log(donation)
 
                 }
 
@@ -94,8 +96,8 @@ function httpGetAsync(theUrl, callback) {
 
 
         setTimeout(function () {
-            $('#forfloyd').fadeOut();
-        }, 1500)
+            $('#container').fadeIn();
+        }, 1000)
 
 
     }
@@ -104,3 +106,13 @@ function httpGetAsync(theUrl, callback) {
 }
 
 httpGetAsync(spreadsheet, data => console.log(JSON.parse(data)))
+
+
+
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 1) { // this refers to window
+        $('nav').css('bottom', '0')
+    } else {
+        $('nav').css('bottom', '-200px')
+    }
+});
