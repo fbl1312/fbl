@@ -17,6 +17,7 @@ function httpGetAsync(theUrl, callback) {
                 $('#title').html(d.feed.title.$t)
                 $('#goal').html(d.feed.entry[0].gsx$goal.$t)
                 $('#date').html(d.feed.entry[1].gsx$goal.$t)
+                $('#info').html(d.feed.entry[0].gsx$info.$t)
 
                 for (i = 0; i < d.feed.entry.length; i++) {
 
