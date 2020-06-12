@@ -18,20 +18,20 @@ function httpGetAsync(theUrl, callback) {
                 $('#goal').html(d.feed.entry[0].gsx$goal.$t)
                 $('#date').html(d.feed.entry[1].gsx$goal.$t)
                 $('#info').html(d.feed.entry[0].gsx$info.$t)
+                
+                console.log(d)
 
                 for (i = 0; i < d.feed.entry.length; i++) {
 
                     var company = d.feed.entry[i].gsx$company.$t
                     var donation = d.feed.entry[i].gsx$donation.$t
+                    var location = d.feed.entry[i].gsx$location.$t
                     var org = d.feed.entry[i].gsx$org.$t
                     var row = '<tr><td>' + company + '</td>' +
-                        '<td class="tableMobile">' + '$' + donation + '</td>' +
+                        '<td class="tableMobile">' + location + '</td>' +
                         '<td>' + org + '</td></tr>'
 
                     $('#table > tbody:last-child').append(row);
-                    var donationM = parseInt(donation);
-                    amount += donationM
-
                 }
 
                 var total = d.feed.entry[0].gsx$total.$t

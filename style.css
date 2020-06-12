@@ -224,12 +224,22 @@ hr {
   body {
   }
     
+    table, #about {
+        margin-bottom: 10px;
+        margin-top: 0;
+    }
+    
     .tableMobile {
         display: none;
     }
     
+    
+    
     td{
         width: 50%;
+    }
+    .footer {
+        margin-top: 60px;
     }
     
 p,
@@ -252,6 +262,14 @@ ol {
     font-size: 18px;
     letter-spacing: .04em;
     word-spacing: -1px;
+
+}
+    h1 {
+        margin-bottom: 0;
+    }
+    
+    #links {
+    margin: 0px 0px 40px;
 
 }
 }
