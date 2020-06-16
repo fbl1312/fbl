@@ -43,7 +43,7 @@ function httpGetAsync(theUrl, callback) {
 
 
                 for (i = 0; i < buttonNumber; i++) {
-                    var buttonHTML = "<a href='" + d.feed.entry[i].gsx$name.$t + "' target=blank_>↳ " + d.feed.entry[i].gsx$buttons.$t + "</a>"
+                    var buttonHTML = "<a href='" + d.feed.entry[i].gsx$buttons.$t + "' target=blank_>↳ " + d.feed.entry[i].gsx$name.$t + "</a>"
                     $("#links").append(buttonHTML);
                 }
 
