@@ -149,13 +149,13 @@ nav {
     right: 0px;
     cursor: pointer;
     mix-blend-mode: exclusion;
-    transition: .2s ease;
+    transition: .5s ease;
     margin-bottom: 10px
 
 }
 
 nav a {
-    transition: .2s ease;
+    transition: .5s ease;
     font-size: 60px;
     cursor: pointer;
     border: none;
@@ -261,7 +261,7 @@ p,
 ol {
     font-size: 18px;
     letter-spacing: .04em;
-    word-spacing: -1px;
+    word-spacing: -1.5px;
 
 }
     h1 {
