@@ -19,7 +19,6 @@ function httpGetAsync(theUrl, callback) {
                 $('#date').html(d.feed.entry[1].gsx$goal.$t)
                 $('#info').html(d.feed.entry[0].gsx$info.$t)
                 
-                console.log(d)
 
                 for (i = 0; i < d.feed.entry.length; i++) {
 
@@ -27,11 +26,18 @@ function httpGetAsync(theUrl, callback) {
                     var donation = d.feed.entry[i].gsx$donation.$t
                     var location = d.feed.entry[i].gsx$location.$t
                     var org = d.feed.entry[i].gsx$org.$t
+                    console.log(company)
+                    
+                    if(company === ""){
+                        
+                    }
+                    else{
                     var row = '<tr><td>' + company + '</td>' +
                         '<td class="tableMobile">' + location + '</td>' +
                         '<td>' + org + '</td></tr>'
 
                     $('#table > tbody:last-child').append(row);
+                        }
                 }
 
                 var total = d.feed.entry[0].gsx$total.$t
@@ -43,7 +49,7 @@ function httpGetAsync(theUrl, callback) {
 
 
                 for (i = 0; i < buttonNumber; i++) {
-                    var buttonHTML = "<a href='" + d.feed.entry[i].gsx$buttons.$t + "' target=blank_>↳ " + d.feed.entry[i].gsx$name.$t + "</a>"
+                    var buttonHTML = "<a href='" + d.feed.entry[i].gsx$buttons.$t + "'>↳ " + d.feed.entry[i].gsx$name.$t + "</a>"
                     $("#links").append(buttonHTML);
                 }
 
